@@ -23,7 +23,7 @@ class Complex:
     def __eq__(self, other):
         return (self.__re == other.__re) and (self.__im == other.__im)
     def __ne__(self, other):
-        return not (self.__re == other.__re) and (self.__im == other.__im)
+        return (self.__re != other.__re) or (self.__im != other.__im)
 
     def __str__(self):
         return (str(self.__re) + " + i" + str(self.__im))
@@ -35,3 +35,6 @@ if __name__ == "__main__":
     print(complex1 - complex2)
     print(complex1 * complex2)
     print(complex1 / complex2)
+    print(abs(complex1))
+    print(complex1 == complex2)
+    print(complex1 != complex2)
