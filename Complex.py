@@ -24,3 +24,14 @@ class Complex:
         return (self.__re == other.__re) and (self.__im == other.__im)
     def __ne__(self, other):
         return not (self.__re == other.__re) and (self.__im == other.__im)
+
+    def __str__(self):
+        return (str(self.__re) + " + i" + str(self.__im))
+
+if __name__ == "__main__":
+    complex1 = Complex(1,2)
+    complex2 = Complex(2,1)
+    print(complex1 + complex2)
+    print(complex1 - complex2)
+    print(complex1 * complex2)
+    print(complex1 / complex2)
