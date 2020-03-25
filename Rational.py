@@ -24,6 +24,8 @@ class Rational:
 
     def __mul__(self, other):
         return Rational(self.__num*other.__num,self.__denum*other.__denum)
+    def __truediv__(self, other):
+        return Rational(self.__num*other.__denum,self.__denum*other.__num)
 
 
 ratio1 = Rational(6,5)
@@ -33,3 +35,4 @@ print(ratio2)
 print(ratio1+ratio2)
 print(ratio1-ratio2)
 print(ratio1*ratio2)
+print(ratio1/ratio2)
